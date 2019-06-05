@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SAOOD</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+
+<style>
+h2, h3,h4{font-family: 'Bree Serif', serif;
+}
+h1{ 
+    font-family: 'Satisfy', cursive;
+    }
+h4{
+    padding: 15px;
+}
+h2{
+    width: 250px;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    height: 500px;
+}
+
+h5{
+    text-transform: uppercase;
+}
+img{
+    height: 450px; width: 200px;
+    }
+body{
+    background-image:url('../IMG/body1.jpeg');
+    }
+.margind{
+    font-family: 'Satisfy', cursive; margin: 0px 100px 50px 100px; padding: 10px; 
+    }    
+.favi{
+    font-size: 30px; padding: 10px; border: 1px solid black; border-radius: 20px;transition: border-radius .5s ease-in-out;
+    }
+.favi:hover{
+    background-color: rgb(250, 212, 0);
+    border-radius: 40px;
+}
+.fas, .fa-wordpress{
+    font-size: 25px;
+}
+.fas:hover, .fa-wordpress:hover, .fa-skype:hover, .fa-envelope:hover{
+    color: white;
+    
+}
+
+.favdiv{
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    padding: 19px;
+    border-radius: 50%;
+}
+.favdiv:hover{
+    background-color: black;
+    border: 1px solid white;
+}
+.download {
+  position: relative;
+  width: 50%;
+}
+
+.margind {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlaydownload {
+  position: absolute;
+  bottom: 100%;
+  overflow: hidden;
+  width: 150px;
+  height:0;
+  transition: .5s ease;
+  margin-left: 130px;    
+}
+
+.download:hover .overlaydownload {
+  bottom: 0;
+  height: 100%;
+}
+.text {
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.progress{
+    height: 25px;
+}
+.para::before{
+    content:attr(background);
+    position: absolute;
+    background: #33CC99;
+    height: 5px;
+    width: 100%;
+}
+.para1::before{
+    content:attr(background);
+    position: absolute;
+    background: #33CC99;
+    height: 5px;
+    width: 100%;
+}
+.lorem::before{
+    content:"S";
+    background: rgb(185, 255, 232);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid #33CC99;
+    left: 96%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #33CC99;
+}
+
+.lorem1::before{
+    content:"H";
+    background: rgb(185, 255, 232);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid #33CC99;
+    right: 95%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #33CC99;
+}
+.line::before{
+    content:"";
+    background:#33CC99;
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    left:50%;
+}
+.inside-para{
+    width: 80%;
+}
+.inside-para1{
+    width: 80%;
+    margin-left: 105px;
+}
+.margintop{
+    margin-top: 100px;
+}
+.abs{
+    position: relative;
+    top: -100px;
+}
+.inside-para3{
+    position:relative;
+    top: -100px;
+}
+.side-margin{
+      margin: 0% 2% 0% 2%;
+  }
+.nav-item {
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.nav-item:hover{
+    color: white;
+}
+.color{
+    color: #33cc99;
+}
+
+.bgcolor{
+    background-color: #33cc99;
+    animation: mymove 1s linear;
+}
+@keyframes mymove {
+    0%   {width: 1px;}
+  
+}
+.topspace{
+   background-color: #33CC99;
+   position:relative;
+   top:-200px;
+}
+p, th, td{
+    font-size: small;
+}
+@media only screen and (max-width: 1000px) {
+  .lorem::before {
+    left:45%;
+    top:-20px;
+    z-index: 1;
+  }
+  .lorem1::before{
+    left:45%;
+    top:-20px;
+    z-index: 1;
+  }
+  .line::before, .para1::before, .para::before{
+      content:none;
+  }
+  
+  .lorem .inside-para{
+      width: inherit;
+      margin:10px;
+  }
+  .lorem1 .inside-para1, .inside-para3{
+      width: inherit;
+      margin:10px 10px 10px 10px;
+  }
+  .margintop{
+      margin-top:0px;
+  }
+  .abs{
+      top: 10px;
+  }
+  .inside-para3{
+      top: 10px;
+  }
+  .lorem2{
+      top: 10px;
+  }
+ .topspace{
+     top: 0px;
+ }
+ #portfolio{
+     margin-top: 150px;
+ }
+ 
+}
+
+/* Portfolio Images */
+#portfolio{
+     position: relative;
+     top: -200px;
+ }
+.images img{
+    width: 100%;
+    height: auto;
+}
+.images div{
+    margin: 10px 0px 0px 0px;
+}
+
+.imagediv {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom:0px;
+  left: 0px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.384);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+  
+}
+
+.imagediv:hover .overlay {
+  width: 100%;
+}
+.hovertext:hover p{
+    background-color: #33cc99;
+    color: white;
+    transition: .5s ease;
+}
+.hovertext:hover h6{
+    background-color: #33cc99;
+    color: white;
+    transition: .5s ease;
+}
+.hovertext{
+    width: 320px;
+}
+.hovertext p, h6{
+    background-color: white;
+}
+/* Portfolio images end */
+
+/* Tab bar menu styling starts */
+
+#nav-home-tab:focus, #nav-profile-tab:focus, #nav-contact-tab:focus{
+    border-bottom: 5px solid #33cc99;
+    border-top: 0px solid white;
+}
+#nav-home-tab:hover ,#nav-contact-tab:hover, #nav-profile-tab:hover{
+    color: black;
+    border-bottom: 5px solid #33cc99;
+    transition: .5s ease-in-out;
+}
+#nav-home-tab, #nav-contact-tab, #nav-profile-tab{
+    border-bottom:5px solid grey;
+    border-right: 0px solid white;
+    border-left: 0px solid white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+/* Tab bar menu styling ends */
+
+
+#services .row p{
+    text-align: justify;
+}
+.bggrey{
+    background-color: rgb(216, 216, 216);
+}
+/* Form style */
+input{
+    height: 40px;
+    width: inherit;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+textarea{
+    width: inherit;
+    border-radius: 5px;
+}
+
+footer{
+    position: relative;
+    top: -210px;
+}
+body{
+    padding-top: 70px;
+}
+
+</style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+
+    <div class="fluid-container" >
+
+        <div class="container">
+            
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background-color: #33cc99">
+
+                <a class="navbar-brand" href="#"><h1>SAOOD</h1></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active p-3" href="#about">About <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link p-3" href="#myskill">Skills</a>
+                        <a class="nav-item nav-link p-3" href="#education">Education</a>
+                        <a class="nav-item nav-link p-3" href="#services">Services</a>
+                        <a class="nav-item nav-link p-3" href="#portfolio">Portfolio</a>
+                        <a class="nav-item nav-link p-3" href="#news">News</a>
+                        <a class="nav-item nav-link p-3" href="#contact">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Photo and introduction -->
+    
+    <div class="container pt-5 bggrey" id="about">
+        <div class="row bg-white">
+            <img class="col-sm-5 pr-5 pl-5 pt-5" src="../IMG/photo1.jpg" alt="Myphoto">
+            <div class="col-sm-7 pt-5 pr-5 pl-5">
+                <h1>
+                    Hi, I'm <span class="color"> Mohd Saood Akhtar </span>
+                </h1>
+                <p>
+                    <em><strong>Web Developer</strong></em> 
+                </p>
+                <p class="text-justify">
+                    My name is Mohd Saood Akhtar. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sunt praesentium suscipit, a sed nam culpa ea dolorum cupiditate fuga natus delectus autem tenetur voluptatibus consequuntur possimus quod dicta necessitatibus!
+                </p>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Age</th>
+                            <td>30</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Nationality</th>
+                            <td>Indian</td>
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">Address</th>
+                            <td>58,Lindemannstrasse, Dussseldorf, Germany</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Phone</th>
+                            <td>015210920149</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Skype</th>
+                            <td>saood011</td>
+                        </tr>   
+                        
+                        <tr>
+                            <th scope="row">Email</th>
+                            <td>saood011@yahoo.com</td>
+                                
+                        </tr>   
+                            
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Download and links -->
+
+        <div class="row bg-white">
+            <div class="col-sm-5">
+                    <div class="download">
+                            <p class="margind bg-warning text-center rounded-pill lead"><b>Download Resume</b> </p>
+                            <div class="overlaydownload rounded-pill bg-warning">
+                              <div class="text"><i class="fas fa-download"></i>
+                              </div>
+                            </div>
+                    </div>
+            
+            </div>
+            <div class="icons col-sm-7 d-flex justify-content-between align-self-start pr-5 pl-5 mb-2">
+                    <i class="favi fab fa-facebook-f pl-3 pr-3" ></i>
+                    <i class="favi fab fa-instagram"></i>
+                    <i class="favi fab fa-linkedin"></i>
+                    <i class="favi fab fa-skype"></i>
+                    <i class="favi fab fa-xing-square"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- My skill -->
+
+    <div class="container bggrey" id="myskill">
+        <div class="row col-sm-12 justify-content-center m-0">
+            <h2 class="text-center border border-dark p-3 mt-5">MY SKILL</h2>
+        </div>
+        
+        <div class="row side-margin">
+            <div class="col-sm-6 pt-4">
+            <h3>WEB DEVELOPMENT SKILLS</h3> <br>
+            <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste error temporibus iure, a vitae ab iusto suscipit consequatur tenetur aliquam nihil quibusdam sit. Omnis enim magni illum perferendis quia dolorem.</p> <br>
+            <h5 >WORDPRESS</h5>
+            <div class="progress"> <div class="progress-bar bgcolor" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100">25%
+            </div></div>
+            <br>
+            <h5 >HTML & CSS</h5>
+            <div class="progress"> <div class="progress-bar bgcolor" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div></div>
+            <br>
+            <h5 >JavaScript</h5>
+            <div class="progress"> <div class="progress-bar bgcolor" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div></div>
+            <br>
+            <h5 >Python</h5>
+            <div class="progress"> <div class="progress-bar bgcolor" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div></div>
+            </div>    
+        
+            <div class="col-sm-6 pt-4">
+                <h3>WEB DESIGN SKILLS</h3> <br>
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed consectetur sint possimus quis beatae, culpa odit exercitationem reiciendis at! Maxime provident incidunt culpa dignissimos,</p> <br>
+                <h5 >Creative Design</h5>
+                <div class="progress"><div class="progress-bar bgcolor" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div></div> 
+                <br>
+                <h5 >Photoshop</h5>
+                <div class="progress"> <div class="progress-bar bgcolor" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div></div>
+                <br>
+                <h5 >Illustrator</h5>
+                <div class="progress"> <div class="progress-bar bgcolor" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div></div>
+                <br>
+                <h5 >Photography</h5>
+                <div class="progress"> <div class="progress-bar bgcolor" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">95%</div></div>
+              
+            </div>
+        </div>
+    </div>
+
+<!-- Education -->
+
+    <div class="container bggrey" id="education">
+        <div class="row col-sm-12 justify-content-center m-0">
+            <h2 class="text-center border border-dark p-3 m-5">EDUCATION</h2>
+        </div>
+        <div class="row line side-margin">
+            <div class="col-sm lorem p-0" >
+                <div class="para">
+                    <p class="text-justify p-3 bg-white inside-para">
+                    <b>2009-10</b>  <br>
+                    <span>Senior Secondary</span>  <br>
+                    <span>Modern Era Public School</span>  <br> <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae excepturi tempora quam, iusto, perspiciatis rerum laudantium consectetur nobis explicabo aut ab delectus consequatur libero exercitationem voluptas quia eius quae.</p></div> 
+            </div>
+            <div class="col-sm lorem1 margintop p-0">
+                <div class="para1 ">
+                        <p class="text-justify p-3 bg-white inside-para1">
+                        <b>2009-10</b>  <br>
+                        <span>Senior Secondary</span>  <br>
+                        <span>Modern Era Public School</span>  <br> <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae excepturi tempora quam, iusto, perspiciatis rerum laudantium consectetur nobis explicabo aut ab delectus consequatur libero exercitationem voluptas quia eius quae.</p></div> 
+                </div>                 
+            </div>
+            <div class="row abs side-margin">
+                    <div class="col-sm lorem p-0">
+                        <div class="para">
+                            <p class="text-justify p-3 bg-white inside-para">
+                            <b>2009-10</b>  <br>
+                            <span>Senior Secondary</span>  <br>
+                            <span>Modern Era Public School</span>  <br> <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae excepturi tempora quam, iusto, perspiciatis rerum laudantium consectetur nobis explicabo aut ab delectus consequatur libero exercitationem voluptas quia eius quae.</p></div> 
+                    </div>
+                    <div class="col-sm lorem1 lorem2 margintop p-0">
+                        <div class="para1 ">
+                                <p class="text-justify p-3 bg-white inside-para1">
+                                <b>2009-10</b>  <br>
+                                <span>Senior Secondary</span>  <br>
+                                <span>Modern Era Public School</span>  <br> <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae excepturi tempora quam, iusto, perspiciatis rerum laudantium consectetur nobis explicabo aut ab delectus consequatur libero exercitationem voluptas quia eius quae.</p></div> 
+                    </div>                 
+            </div>
+            <div class="row abs side-margin ">
+                    <div class="col-sm-6 lorem p-0 inside-para3 " >
+                        <div class="para">
+                            <p class="text-justify p-3 bg-white inside-para">
+                            <b>2009-10</b>  <br>
+                            <span>Senior Secondary</span>  <br>
+                            <span>Modern Era Public School</span>  <br> <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae excepturi tempora quam, iusto, perspiciatis rerum laudantium consectetur nobis explicabo aut ab delectus consequatur libero exercitationem voluptas quia eius quae.</p></div> 
+                    </div>                        
+            </div>
+        </div>
+
+<!-- Services -->    
+
+<div class="container topspace pl-5 pr-5" id="services">
+    <div class="row col-sm-12 justify-content-center m-0">
+        <h2 class="text-center border border-dark p-3 m-5">SERVICES</h2>
+    </div>
+    <div class="row">
+            <div class="col-sm-6 p-4 d-flex flex-column align-items-center">
+            <div class="favdiv text-center" >
+            <i class="fab fa-wordpress"></i></div>
+            <h4>Wordpress Development</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab non repudiandae obcaecati molestiae praesentium fuga consequatur delectus aspernatur enim ducimus nulla quam dolore, perspiciatis a sunt, maxime voluptatum alias.</p>
+        </div>
+        <div class="col-sm-6 p-4 d-flex flex-column align-items-center">
+                <div class="favdiv text-center" >
+                <i class="fas fa-paint-brush"></i></div>
+                <h4>Creative Design</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab non repudiandae obcaecati molestiae praesentium fuga consequatur delectus aspernatur enim ducimus nulla quam dolore, perspiciatis a sunt, maxime voluptatum alias.</p>
+            </div>
+    </div>
+    <div class="row">
+            <div class="col-sm-6 p-4 d-flex flex-column align-items-center">
+                    <div class="favdiv text-center" >
+                <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h4>Mobile App Development</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab non repudiandae obcaecati molestiae praesentium fuga consequatur delectus aspernatur enim ducimus nulla quam dolore, perspiciatis a sunt, maxime voluptatum alias.</p>
+            </div>
+            <div class="col-sm-6 p-4 d-flex flex-column align-items-center">
+                    <div class="favdiv text-center " >
+                    <i class="fas fa-users"></i></div>
+                    <h4>Social Media</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab non repudiandae obcaecati molestiae praesentium fuga consequatur delectus aspernatur enim ducimus nulla quam dolore, perspiciatis a sunt, maxime voluptatum alias.</p>
+            </div>
+    </div>
+        <div class="row">
+            <div class="col-sm-6 p-4 d-flex flex-column align-items-center">
+                    <div class="favdiv text-center" >
+                    <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <h4 >Photography</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab non repudiandae obcaecati molestiae praesentium fuga consequatur delectus aspernatur enim ducimus nulla quam dolore, perspiciatis a sunt, maxime voluptatum alias.</p>
+                </div>
+                <div class="col-sm-6 p-4 d-flex flex-column align-items-center">
+                <div class="favdiv text-center" >
+                <i class="fas fa-laptop-code"></i>
+                </div>
+                <h4>Website Development</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab non repudiandae obcaecati molestiae praesentium fuga consequatur delectus aspernatur enim ducimus nulla quam dolore, perspiciatis a sunt, maxime voluptatum alias.</p>
+            </div>
+        </div>
+</div>
+
+<!-- Portfolio -->
+
+<div class="container bggrey" id="portfolio">
+        <div class="row col-sm-12 justify-content-center m-0">
+            <h2 class="text-center border border-dark p-3 m-5">PORTFOLIO</h2>
+        </div>
+        <div class="row col-sm-12 d-flex flex-column align-items-center justify-content-center m-0 p-0" >
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link m-0 active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All</a>
+                        <a class="nav-item nav-link m-0" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">HTML & CSS</a>
+                        <a class="nav-item nav-link m-0" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Bootstrap</a>
+                    </div>
+                </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="d-flex images flex-wrap align-items-center justify-content-center" >
+                                    <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/201x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/202x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/203x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/204x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/205x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/206x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/207x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/208x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                            </div> 
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="d-flex flex-wrap align-items-center justify-content-center" >
+                                    <div class="m-3 hovertext">
+                                        <div class="imagediv images">
+                                                <img src="https://source.unsplash.com/random/201x200" alt="">
+                                                <div class="overlay"><div></div></div> 
+                                        </div>
+                                                <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                   </div>
+                                   <div class="m-3 hovertext">
+                                        <div class="imagediv images">
+                                                <img src="https://source.unsplash.com/random/202x200" alt="">
+                                                <div class="overlay"><div></div></div> 
+                                        </div>
+                                                <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                   </div>
+                                   <div class="m-3 hovertext">
+                                        <div class="imagediv images">
+                                                <img src="https://source.unsplash.com/random/203x200" alt="">
+                                                <div class="overlay"><div></div></div> 
+                                        </div>
+                                                <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                   </div>
+                                   <div class="m-3 hovertext">
+                                        <div class="imagediv images">
+                                                <img src="https://source.unsplash.com/random/207x200" alt="">
+                                                <div class="overlay"><div></div></div> 
+                                        </div>
+                                                <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                   </div>
+                                   <div class="m-3 hovertext">
+                                        <div class="imagediv images">
+                                                <img src="https://source.unsplash.com/random/208x200" alt="">
+                                                <div class="overlay"><div></div></div> 
+                                        </div>
+                                                <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                   </div>  
+                                </div> 
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <div class="d-flex images flex-wrap align-items-center justify-content-center" >
+                                    <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                <img src="https://source.unsplash.com/random/204x200" alt="">
+                                                <div class="overlay"><div></div></div> 
+                                            </div>
+                                                <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                    </div>
+                                    <div class="m-3 hovertext">
+                                        <div class="imagediv ">
+                                            <img src="https://source.unsplash.com/random/205x200" alt="">
+                                            <div class="overlay"><div></div></div> 
+                                        </div>
+                                        <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                        <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                    </div>
+                                    <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/207x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/208x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/207x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                       <div class="m-3 hovertext">
+                                            <div class="imagediv images">
+                                                    <img src="https://source.unsplash.com/random/209x200" alt="">
+                                                    <div class="overlay"><div></div></div> 
+                                            </div>
+                                                    <h6 class="text-center m-0 p-1"> <b>Dream Project</b></h6>
+                                                    <p class="text-center m-0 p-1">by Saood Akhtar</p>
+                                       </div>
+                                </div> 
+                        </div>
+                      </div>
+        </div>
+</div>
+
+<!-- NEWS -->
+
+<div class="container bggrey" id="news" style=" position: relative; top: -200px;">
+    <div class="row col-sm-12 justify-content-center m-0">
+        <h2 class="text-center border border-dark p-3 m-5">NEWS</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="facebook p-3">
+                <h6 class="text-center lead p-3">Facebook</h6>
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum accusamus nesciunt odit ab fugiat amet soluta unde, quibusdam at. Magnam nihil amet minima accusantium? Explicabo asperiores iusto necessitatibus nostrum quod!</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="blog p-3">
+                <h6 class="text-center lead p-3">Blog</h6>
+                <img src="../IMG/body.jpeg" alt="" style="height: 200px; width: 320px;">
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum accusamus nesciunt odit ab fugiat amet soluta unde, quibusdam at. Magnam nihil amet minima accusantium? Explicabo asperiores iusto necessitatibus nostrum quod!</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="insta p-3">
+                <h6 class="text-center lead p-3">Insta</h6>
+                <img src="../IMG/insta.jpeg" alt="" style="height: 200px; width: 320px;">
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum accusamus nesciunt odit ab fugiat amet soluta unde, quibusdam at. Magnam nihil amet minima accusantium? Explicabo asperiores iusto necessitatibus nostrum quod!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact me-->
+
+<div class="container bggrey" id="contact" style=" position: relative; top: -200px;">
+    <div class="row col-sm-12 justify-content-center m-0">
+        <h2 class="text-center border border-dark p-3 mt-5">CONTACT ME</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 p-5">
+            <h3 class="text-center p-3">Contact Info </h3>
+            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia suscipit magnam ullam sed aut. Doloremque corrupti reprehenderit consequatur beatae aut, accusamus quo cumque placeat possimus ducimus omnis quas minima eos?</p>
+            <div> <hr>
+                <div class="text-center">
+                    <i class="fas fa-map-marker-alt bg-success" style="padding: 15px; border-radius: 20px;"></i>
+                    <p class="pt-4"> <b>ADDRESS</b>  <br> Lindemannstrasse 58, Dussseldorf, Germany  <p>
+                </div> <hr>
+                <div class="text-center">
+                    <i class="fab fa-skype bg-success" style="font-size: 35px;padding: 10px; border-radius: 20px;"></i>
+                    <p class="pt-4"> <b>SKYPE</b>  <br> saood011<p>
+                </div>  <hr>
+                <div class="text-center">
+                    <i class="far fa-envelope bg-success" style="font-size: 30px; padding: 10px; border-radius: 20px;"></i>
+                    <p class="pt-4"> <b>EMAIL</b>  <br> saood011@yahoo.com <p>                    
+                </div>   
+            </div>
+        </div>
+        <div class="col-sm-6 p-5">
+            <h3 class="text-center p-3">Send Message</h3>
+            <form action="" style="width: inherit;">
+                <input type="text" placeholder="  First Name" required> <br>
+                <input type="text" placeholder="  Last Name"> <br>
+                <input type="email" placeholder="  Email" required> <br>
+                <input type="text" placeholder="  Subject"> <br>
+                <textarea name="writemessage" id="" cols="30" rows="10" placeholder="  Write message"></textarea> <br>
+                <button type="submit" class="btn btn-success">Send message</button>
+            </form>
+        </div>
+    </div>       
+</div>
+<footer class="bg-dark p-2 text-center">
+    <p class="text-white pt-2">Copyright &copy 2019 All rights reserved ~ This website is made by Saood with <img src="../IMG/heart.gif" alt="" style="height:30px; width: 30px;"></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Character locate</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+ <!-- Replace a word -->
+
+<script>
+
+   var sPosition;
+    function myReplace(mystring, oldvalue, newvalue){
+        sPosition = mystring.indexOf(oldvalue);
+    var input1 = mystring.slice(0, sPosition);
+    var input2 = mystring.slice((oldvalue.length+sPosition), mystring.length);
+    var result = input1 + newvalue + input2;
+    return result;
+    }
+    console.log(myReplace("where is my code is code", "code", "phone")); 
+    
+</script>
+     
+
+<!-- Reverse a word -->
+
+
+<script>
+
+        var myarray = [];
+        var result="";
+         function myReverse(str){
+            for (i = str.length ; i>=0; i--){
+            var char = str.substr(i, 1);
+            myarray.push(char);          
+      
+            } 
+            for (i = 0; i<=myarray.length-1; i++){
+                result += myarray[i];
+            }
+            return result;
+        }                     
+     
+        console.log(myReverse("saood akhtar"));
+        
+</script>
+
+<script>
+var str = " location find the location and replace location"
+
+function replaceAll(str, oldValue, newValue){
+    for (i = 0; i <= str.length; i++){
+
+
+
+    }
+
+
+}
+
+
+
+</script>
+
+</body>
+</html>
