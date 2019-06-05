@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adding even and odd numbers of arrays using concate function</title>
+</head>
+<body>
+    <script>
+
+    var evenArray = [];
+    var oddArray = [];
+
+    //Creating two array with odd and even numbers
+    for(i = 0; i < 10; i++){
+        if(i%2 == 0){
+            evenArray.push(i);
+        }else{
+            oddArray.push(i);
+        }
+    }
+
+    console.log(evenArray, oddArray);
+
+    //Concating the both arrays into one///
+    var sumArray = evenArray.concat(oddArray);
+
+    //Sorting the result of the array in order///
+    var sortarray = sumArray.sort();
+
+    console.log(sortarray);
+        
+        </script>
+    
+</body>
+</html>

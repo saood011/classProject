@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Finding out the Prime Numbers</title>
+</head>
+<body>
+    <script>
+    var myArray = []; //Creating Array with 101 elements;
+    for (i= 0; i < 100; i++){
+        if(i%2 !== 0 && i%3 !== 0 && i%5 !== 0 && i%7 !== 0 && i%9 !== 0){
+      myArray.push(i);
+    }   
+}
+
+myArray.splice(0,1, 2,3,5,7);
+
+console.log(myArray);
+
+        
+        </script>
+</body>
+</html>
