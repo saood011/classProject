@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shift and pop Function to find the center of an Array</title>
+</head>
+<body>
+    <script>
+        
+    /////Finding the center of an Array/////
+
+    var myArray = []; //Creating Array with 101 elements;
+    for (i= 0; i < 101; i++){
+        myArray.push(i);
+    }
+    console.log( " Adding array:" + myArray);
+
+    /// Our main code ///
+
+    for (i = 0; i < 102; i++){
+        if (myArray.length>1){
+        myArray.pop(i);
+        myArray.shift(i); 
+        console.log(myArray);
+        }
+    }
+    console.log("Center of the array : " + myArray);
+
+    </script>
+</body>
+</html>
