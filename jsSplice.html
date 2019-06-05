@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add elements in an array with splice</title>
+</head>
+<body>
+    <script>
+    var myClass = ['ayham', 'lava', 'omar', 'wael', 'soheel', 'saood', 'nooruddin', 'hafeez', 'hamid', 'nidal', 'maziar'];
+
+    document.write("My class without old guys: " + myClass.join(" - ") + "<br>" + "<br>" );
+
+    var center = myClass.length/2;
+
+    console.log(center);
+
+    myClass.splice(center,0, "FARSHID", "KHALDOUN");
+
+
+    document.write("My class with oldies : " + myClass.join(' - '));
+
+    </script>
+</body>
+</html>
