@@ -1,0 +1,27 @@
+$mycolor: #337fff;
+@mixin transform($property){
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+main{
+    margin: 200px;
+    width: inherit;
+}
+body{
+    background-color:$mycolor;
+    width: 100%;
+    img{
+        position: absolute;
+    }
+        }
+#a{@include transform(rotate(10deg));
+left:200px;}
+#b{@include transform(rotate(30deg));
+left: 250px;}
+#c{@include transform(rotate(50deg));
+left:300px;}
+#d{@include transform(rotate(70deg));
+left:350px;top:220px;}
+#e{@include transform(rotate(90deg));
+left:390px;top:260px;}

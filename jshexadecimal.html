@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hexadecimal converter</title>
+</head>
+<body>
+    Input:<input type="text" id="input1">
+    Base : <input type="text" id="base" >
+    <button type="button" onclick="hexa()">Result</button>
+    <p id="display"></p>
+
+
+    <script>
+
+    function hexa(base){
+    var base = document.getElementById('base').value;
+    var input1 = parseInt(document.getElementById('input1').value);
+    var result = input1.toString(base);
+    document.getElementById('display').innerHTML = "The Hexadecimal value of " + input1 + " " +  "with base" + " " + base + " " + "is" + " " + result;
+    }
+    
+
+    
+    </script>
+</body>
+</html>

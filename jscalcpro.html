@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calc Pro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+.btn{
+    border-radius: 50%;
+}
+
+</style>
+</head>
+<body>
+    <div class="container w-25 p-3 bg-white m-5 border border-dark shadow-lg ">
+        <div class="row">
+            <div class=" w-100 pl-1 pr=1 ml-3 mr-3 mb-1" >
+                <input class="input-group-text" type="text" id="show" style="width: inherit; background: black; color:white;">
+            </div>
+        </div>
+        <div class="row">
+            <div class=" w-100  pl-1 pr=1 ml-3 mr-3 mb-2"  >
+                <input class="input-group-text" type="text" id="show2" style="width: inherit;background: black;color: white;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-bordered text-center m-0">
+                    <tr>
+                        <td> <button type="button" class="btn btn-primary btn-lg " onclick="insertnum('mybtn')" value="1" id="mybtn">1</button> </td>
+                        <td><button type="button" class="btn btn-primary  btn-lg" onclick="insertnum('mybtn2')" value="2" id="mybtn2">2</button></td>
+                        <td><button type="button" class="btn btn-primary  btn-lg" onclick="insertnum('mybtn3')" value="3" id="mybtn3">3</button></td>
+                        <td><button type="button" class="btn btn-danger  btn-lg" onclick="insertnum('mybtn+')" value="+" id="mybtn+">+</button></td>
+                    </tr>
+                    <tr>
+                        <td> <button type="button" class="btn btn-primary  btn-lg" onclick="insertnum('mybtn4')" value="4" id="mybtn4">4</button> </td>
+                        <td><button type="button" class="btn btn-primary  btn-lg" onclick="insertnum('mybtn5')" value="5" id="mybtn5">5</button></td>
+                        <td><button type="button" class="btn btn-primary  btn-lg" onclick="insertnum('mybtn6')" value="6" id="mybtn6">6</button></td>
+                        <td><button type="button" class="btn btn-danger  btn-lg" onclick="insertnum('mybtn-')" value="-" id="mybtn-">-&nbsp;</button></td>
+                    </tr>
+                    <tr>
+                        <td> <button type="button" class="btn btn-primary  btn-lg" onclick="insertnum('mybtn7')" value="7" id="mybtn7">7</button> </td>
+                        <td><button type="button" class="btn btn-primary  btn-lg" onclick="insertnum('mybtn8')" value="8" id="mybtn8">8</button></td>
+                        <td><button type="button" class="btn btn-primary  btn-lg" onclick="insertnum('mybtn9')" value="9" id="mybtn9">9</button></td>
+                        <td><button type="button" class="btn btn-danger  btn-lg" onclick="insertnum('mybtn*')" value="*" id="mybtn*">*</button></td>
+                    </tr>
+                    <tr>
+                        <td> <button type="button" class="btn btn-warning  btn-lg" onclick="insertnum('mybtn0')" value="a" id="mybtn0">AC</button> </td>
+                        <td><button type="button" class="btn btn-primary  btn-lg" onclick="insertnum('mybtn00')" value="0" id="mybtn00">0</button></td>
+                        <td><button type="button" class="btn btn-danger  btn-lg" onclick="insertnum('mybtn/')" value="/" id="mybtn/">/&nbsp;</button></td>
+                        <td><button type="button" class="btn btn-warning  btn-lg" onclick="result()" value="=" id="mybtn=">=</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    function insertnum(y){
+        var x = document.getElementById(y).value;
+        var z = document.getElementById("show").value;
+
+        document.getElementById("show").value = z + x;
+
+        if (x == "a"){
+            document.getElementById("show").value = "";
+        }
+    }
+    function result(){
+        var s = eval(document.getElementById("show").value);
+        document.getElementById("show2").value = s;
+    }
+
+    </script>
+</body>
+</html>

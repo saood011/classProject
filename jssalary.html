@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        var highestSalary = [ 
+        { name: "saood", age: 30, salary: 50060},
+        { name: "omar", age: 27, salary: 4000},
+        { name: "lava", age: 26, salary: 3800},
+        { name: "hafez", age: 40, salary: 3340},
+        { name: "hamid", age: 35, salary: 3600},
+        { name: "noorul", age: 33, salary: 3400},
+        { name: "farshid", age: 40, salary: 3400},
+        { name: "wael", age: 36, salary: 3200},
+        { name: "khaldon", age: 45, salary: 3100} ];
+                
+        var max = 0;        
+
+        for ( i = 0; i<highestSalary.length; i++){
+
+        if (max < highestSalary[i].salary){
+            max = highestSalary[i].salary;  
+        var name = highestSalary[i].name;
+        }  
+  
+    }             
+    console.log(max + name);
+   
+        </script>
+</body>
+</html>
+
+
+
+

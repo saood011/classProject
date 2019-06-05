@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Refill the jug</title>
+    <style>
+        #main {
+            height: 300px;
+            width: 300px;
+            border: 5px solid black;
+            border-top: 0px;
+            margin: 200px 0 0 200px;;
+        }
+
+        #inside {
+            height: 10px;
+            width: inherit;
+            background: blue;
+            position: absolute;
+            bottom:478px;
+            color: white;
+            font-size: 50px;
+        }
+
+        button {
+            position: absolute;
+            top: 400px;
+            left: 600px;
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body onload="alert('hello')">
+    
+
+   
+<div>
+    <div id="main">
+        <div id="inside">
+            
+        </div>
+    </div>
+</div>
+    <button type="button" onclick="input2()">Click to fill</button>
+    <script>
+        var jug = {
+            maxvalue: 300,
+            currentValue: 0,
+            refillValue: function () {
+                if ((this.currentValue + 50) <= this.maxvalue) {
+                    this.currentValue += 50;
+                   // console.log(this.crrentValue);
+                    return this.currentValue;
+                } else {
+                    document.getElementById("inside").innerHTML = " Jug is full, Stop!!!";
+;                    return this.currentValue; 
+
+                }
+            }
+
+        }
+
+       // jug.currentValue = jug.refillValue();
+        
+
+        function input2(){   
+            jug.currentValue = jug.refillValue();
+            var result = jug.currentValue + "px";
+            document.getElementById("inside").style.height = result;
+
+ };
+
+    </script>
+</body>
+
+</html>

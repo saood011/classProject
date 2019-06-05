@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While loop</title>
+<style>
+main{
+display: flex;
+margin: 50px;
+
+}
+#firstouter{
+width: 300px;
+height: 300px;
+border: 5px solid black;
+border-top: 0px;
+}
+#firstinner{
+width: 298px;
+height: 250px;
+border: 1px solid red;
+position: absolute;
+bottom: 627px;
+background: red;
+}
+#secondouter{
+width: 300px;
+height: 300px;
+border: 5px solid black;
+border-top: 0px;
+margin-left: 10px;
+
+}
+
+#secondinner{
+width: 300px;
+height: 50px;
+position: absolute;
+bottom: 627px;
+background: blue;
+}
+#balance{
+    height: 30px;
+    padding: 5px;
+    margin-left: 300px;
+    
+}
+p{
+    font-size: 20px;
+    margin-left: 250px;
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+    <div id="firstouter">
+        <div id="firstinner">
+
+        </div>
+    </div>
+
+    <div id="secondouter">
+        <div id="secondinner">
+
+        </div>
+    </div>
+    
+</main>
+<button id="balance" type="button" onclick="balance()">Click to Balance</button>
+<button type="button" onclick="reset()">Reset</button>
+<p id="wow"></p>
+<script>
+
+var x = document.getElementById('firstinner').clientHeight;
+var y = document.getElementById('secondinner').clientHeight;
+   
+function balance(){
+
+while (x > y){
+         x--;
+         y++;
+     }
+document.getElementById("wow").innerHTML = "Wowwww!!!!! They are balanced";
+
+document.getElementById('firstinner').style.height = x + "px";
+
+document.getElementById('secondinner').style.height = y +  "px"; 
+
+    }
+
+ 
+function reset(){
+
+document.getElementById("wow").innerHTML = "Please balance the color levels :(((";
+document.getElementById('firstinner').style.height = 250 + "px";
+document.getElementById('secondinner').style.height = 50 + 'px';
+}
+
+</script>
+
+</body>
+</html>

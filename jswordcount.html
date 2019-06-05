@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Count</title>
+</head>
+<body>
+    <textarea name="" id="para" cols="140" rows="10"></textarea> <br>
+    <button type="button" onclick="wordcount()">Click to counts the word</button>
+    <p id="display"></p>
+
+    <script>
+    function wordcount(){
+    var str = (document.getElementById('para').value).trim();
+    var result = str.split(' ');
+    document.getElementById("display").innerHTML = "Total words in the above para are :" + " " + result.length;
+
+    }
+  
+    /* var arr = [];
+    for( i =0; i<str.length; i++){
+        arr.push(str.split(' '));
+    }
+    console.log(arr);
+     */
+    
+    </script>
+</body>
+</html>
