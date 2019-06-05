@@ -10,7 +10,7 @@ function myProgram() {
         myArray.splice(myArray.length,0, i);
         //console.log(myArray.length);
         if (i == 100) {
-            addOrRemove = 'remove'
+            addOrRemove = 'remove';
         }
 
     } else if (i > 0 && addOrRemove == 'remove') {
@@ -19,7 +19,7 @@ function myProgram() {
         myArray.splice(0,1);
         //console.log(myArray.length);
         if (i == 0) {
-            addOrRemove = 'add'      
+            addOrRemove = 'add'  ;    
 
                 }
     } 
