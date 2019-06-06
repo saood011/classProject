@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slice Array</title>
+</head>
+<body>
+    <script>
+        
+        /// sorting and concating according to the numbers of the elements in an array////
+
+        var myarray= [];
+        for(i=0; i<31; i++){
+            myarray.push(i);
+        }
+        var slice1 = myarray.slice(0,8);
+        var slice2 = myarray.slice(8,15);
+        var slice3 = myarray.slice(15,30);
+
+        console.log(slice1, slice2, slice3);
+
+        var sorted = [slice1, slice2, slice3];
+
+        var resorted = sorted.sort(function(a,b){return a.length - b.length});
+        console.log(resorted);
+
+        console.log(resorted[0].concat(resorted[1], resorted[2]));
+        
+
+
+  
+ 
+        
+        </script>
+</body>
+</html>
