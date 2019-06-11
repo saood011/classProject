@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate fibonacci numbers</title>
+</head>
+<body>
+    <script>
+    function fibo(x){
+        if (x<=1){
+            return x;
+        }else{
+            var s = fibo(x-1) + fibo(x-2);
+            return s;
+        }           
+    console.log(s);
+
+    }
+    var y = [];
+    for (i=0; i<=11; i++){
+        y.push(fibo(i));
+    }
+    console.log(y);
+    console.log(eval(y.join('+')));
+
+
+    
+    
+    </script>
+</body>
+</html>
