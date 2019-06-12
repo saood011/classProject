@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For each</title>
+</head>
+<body>
+    <script>
+    var Array1 = [1,2,3,4,5];
+    var Array2= [];
+
+   console.log('Our Array: ' + Array1);
+
+    Array1.forEach(myfunc);
+
+    function myfunc(value){
+    Array2.unshift(value);
+    }
+    console.log('New Array: ' + Array2)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Randow Quote</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="randomQuotes()">click</button>
+    <script>
+       var myQuotes = ['this is first quote','second quote', 'third quote','fourth quote'];
+       
+       function randomQuotes(){
+           var rq = Math.round(Math.random()*3);
+           document.getElementById('demo').innerHTML = myQuotes[rq];
+       }
+        
+        </script>
+</body>
+</html>

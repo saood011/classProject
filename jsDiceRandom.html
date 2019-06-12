@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dice throw</title>
+<style>
+img{
+    width: 200px;
+    height: 200px;
+}
+
+</style>
+</head>
+<body>
+    <p id="dice"> </p>
+    <img id="image"> <br>
+   
+    <button onclick="mydice()" style="margin-left: 80px;">Roll</button>
+    <script>
+        function mydice(){
+        var rollresult = Math.round(Math.random()*5)+1; 
+        console.log(rollresult); 
+        switch(rollresult){
+        case 1: {image = '/Dice-1.png'; break;}
+        case 2: {image = '/Dice-2.png'; break;}
+        case 3: {image = '/Dice-3.png'; break;}
+        case 4: {image = '/Dice-4.png'; break;}
+        case 5: {image = '/Dice-5.png'; break;}
+        case 6: {image = '/Dice-6.png'; break;}
+        default: break;  
+                }
+      
+ document.getElementById('image').src = image;
+
+}
+   
+        </script>
+
+</body>
+</html>

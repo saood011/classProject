@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reduce function</title>
+</head>
+<body>
+    <script>
+    var names = [2,4,6,8];
+    var newValue = names.reduce(func1);
+    function func1(total, value){
+      var result = total + value;
+      return result;
+    
+    }
+    console.log(newValue/names.length);
+    
+    
+    </script>
+</body>
+</html>
