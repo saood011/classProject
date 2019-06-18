@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Square of an element in an array</title>
+</head>
+<body>
+    <script>
+        /// return true if the array has an element which is square of other element.
+
+        
+    var myarray = [2,13, 5, 4, 49,59];
+    var result = myarray.some(myfunc);
+        console.log(result);
+    function myfunc( value){
+        value = value *value;
+        for (i=0; i<myarray.length; i++){
+            if(myarray[i]== value){
+               return value;     
+            }  
+        }
+    }
+    
+    </script>
+</body>
+</html>
