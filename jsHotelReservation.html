@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hotel Reservation</title>
+    <style>
+        main{
+            background: lightblue;
+            width: 450px;
+            height: 900px;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        #floor1, #floor2{
+            height: 400px;
+            width: 400px;
+            background: red;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            align-items: center;
+
+        }
+        
+        h2{
+            width: 80px;
+            height:80px;
+            background: white;
+            margin: 10px;
+            border: 1px solid black;
+        }
+        h1{
+            font-size: 35px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+       <marquee behavior="" direction=""><h1>Hotel SA7</h1></marquee> 
+        
+        <div id="floor1">
+
+            <h2 id="room-0"> 1</h2>
+            <h2 id="room-1"> 2</h2>
+            <h2 id="room-2"> 3</h2>
+            <h2 id="room-3"> 4</h2>
+            <h2 id="room-4"> 5</h2>
+            <h2 id="room-5"> 6</h2>
+        </div>
+
+        <div id="floor2">
+            <h2 id="room1-0"> 1</h2>
+            <h2 id="room1-1"> 2</h2>
+            <h2 id="room1-2"> 3</h2>
+            <h2 id="room1-3"> 4</h2>
+            <h2 id="room1-4"> 5</h2>
+            <h2 id="room1-5"> 6</h2>
+
+        </div>
+
+
+    </main>
+    <br>
+    <script>
+        var hotel = [['o', 'o', 'o', 'o', 'e', 'o' ],['o', 'e', 'o', 'o', 'o', 'o' ]];
+
+        var statusForFloorOne = hotel[0].some(myfunc);
+        var statusForFloorSecond = hotel[1].some(myfunc);
+        console.log(statusForFloorOne)
+        console.log(statusForFloorSecond)
+
+        function myfunc(value){
+            return value == 'e';
+                       
+        }
+        //checking the floor status
+        if (statusForFloorOne == true ){
+                document.getElementById("floor1").style.background = "green";
+            }
+        if(statusForFloorSecond == true){
+            document.getElementById("floor2").style.background = "green";
+
+        }
+
+        //checking the first floor rooms status 
+        var occupiedRooms = [];
+        for (i=0; i<hotel[0].length; i++){
+            if(hotel[0][i]=='o'){
+                document.getElementById('room-'+ i).style.background = 'red';           
+                occupiedRooms.push(i);
+            }               
+        }
+
+
+        for (i=0; i<hotel[1].length; i++){
+            if(hotel[1][i]=='o'){
+                document.getElementById('room1-'+ i).style.background = 'red';
+                occupiedRooms.push(i);
+            }
+        }
+
+        document.write('There are ' + ((hotel[0].length+hotel[1].length) - occupiedRooms.length) + ' empty rooms in the hotel');
+
+
+
+       
+    </script>
+</body>
+</html>
