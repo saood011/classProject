@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date in different format</title>
+</head>
+<body>
+    <script>
+
+
+    var current  = new Date();
+
+    var currents = current.toString();
+
+    var mydate = currents.split(" ");
+    console.log(mydate);
+
+
+    var finaldate = (mydate[2] + "_" + mydate[1]+ "_" + mydate[3]);
+
+    document.write("Changed format from : " + ' ' + current + ' ' +'to :'+ ' ' + "<b><em>"+ finaldate + "</em></b>");
+    </script>
+</body>
+</html>

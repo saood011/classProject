@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Updating the birthday using set date</title>
+</head>
+<body>
+    <form action="">
+        Birthday: <input type="text" id="input">
+        <button type="button" onclick="update()">Update</button>
+        <p id="display"> My birthday is on 15 jan 2019</p>
+    </form>
+    <script>
+    
+    var myBirthday = new Date("19 feb, 1988");
+    console.log(myBirthday);
+    
+    function update(){
+        var mycorrectbirthday = document.getElementById('input').value;
+        console.log(mycorrectbirthday);
+        var birthdayUpdate = new Date(mycorrectbirthday);
+
+        console.log(birthdayUpdate);
+
+        myBirthday.setDate(birthdayUpdate.getDate());
+        myBirthday.setMonth(birthdayUpdate.getMonth());
+        myBirthday.setFullYear(birthdayUpdate.getFullYear());
+        document.getElementById('display').innerHTML = "My correct birthday is on :" +  myBirthday.getDate() + '/'+ (myBirthday.getMonth()+1) + '/' + myBirthday.getFullYear() ;
+    }
+    
+    </script>
+</body>
+</html>

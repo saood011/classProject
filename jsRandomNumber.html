@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Number Exercise</title>
+    <style>
+    div{
+        width: 300px;
+        height: 300px;
+        text-align: center;
+    }
+    p{
+        width: 100%;
+        height: 50px;
+        background: grey;
+        padding: 20px;
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        border-radius: 20px;
+        outline: none;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <p id="demo"></p>
+            <button type="button" onclick="myran()">Try</button>
+            <p id="result"></p>
+            <p id="times"> </p>
+
+        </div>
+        
+<script>
+// if you get 10 you win 1 euros each time
+
+    var myarray = [];
+
+function myran(){
+
+    var ran = document.getElementById('demo').innerHTML = Math.round(Math.random()*10);
+
+    if (ran == 10){
+        document.getElementById('result').innerHTML = "You won 100 '\u20ac'";
+        document.getElementById('result').style.background = 'green';
+        document.getElementById('result').style.fontSize = '20px';
+        
+        myarray.push(ran);
+    } else{
+        document.getElementById('result').innerHTML = " Keep trying...";
+        document.getElementById('result').style.background = 'grey';
+        document.getElementById('result').style.fontSize = 'initial';
+
+
+    }
+document.getElementById('times').innerHTML ="Number of times you won: " + myarray.length;
+}
+
+
+</script>
+
+    </main>
+</body>
+</html>

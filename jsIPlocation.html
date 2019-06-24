@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Get Client Machine IP Address using JavaScript and JSON</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+  <script type="text/javascript">
+    var getIPAddress = function() {
+      $.getJSON("https://jsonip.com?callback=?", function(data) {
+        alert("Your IP address is :- " + data.ip);
+      });
+    };
+
+
+
+  </script>
+</head>
+
+<body>
+  <div>
+
+    <a href="#" onclick="getIPAddress()">Click to get IP Address</a> 
+ 
+  </div>
+</body>
+
+</html>

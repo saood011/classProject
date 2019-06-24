@@ -37,7 +37,7 @@
             var password   = (document.getElementById('password').value).trim().toLowerCase();
             var date = document.getElementById('date').value;
             var mydate = date.split("-")
-            var finaldate = (mydate[2] + "." + mydate[1]+ "." + mydate[0]);
+            var finaldate = (mydate[2] + "_" + mydate[1]+ "_" + mydate[0]);
 
             if ( password.length < 8){
                 document.getElementById('display').innerHTML = "Welcome" + ' ' + fullName.toUpperCase() + " on "+ finaldate;

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url("./clock.png");
+    background-size: cover;
+    position: relative;
+    box-shadow: -4px 20px 37px 0px rgba(0,0,0,0.75);
+
+}
+.circle:after{
+position:absolute;
+content: '';
+background: yellow;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+transform: translateX(250%) translateY(250%);
+text-align: center;
+}
+.second{
+    width: 150px;
+    height: 140px;
+    border-right: 2px solid yellow;
+    margin-top: 10px;
+    transform-origin: bottom right;
+    position: absolute;
+}
+.minute{
+    width: 140px;
+    height: 120px;
+    border-right: 3px solid red;
+    margin-left: 7px;
+    position: absolute;
+    transform-origin: bottom right ;
+    position:absolute;
+    margin-top: 30px;
+}
+.minute:after{
+position:absolute;
+content: ' ';
+background: red;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+transform: translateX(1365%) translateY(150%);
+}
+.hour{
+    width: 145px;
+    height: 100px;
+    border-right: 10px solid red;
+    margin-left: 1px;
+    position: absolute;
+    transform-origin: bottom right;
+    margin-top: 50px;
+    
+}
+
+    
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="second" id="sec"></div>
+        <div class="minute" id="min"></div>
+        <div class="hour" id="hr"></div>
+
+    </div>
+
+<script>
+setInterval(myClockMove, 1000);
+
+
+function myClockMove(){
+
+var myclock = new Date();
+var myhour= myclock.getHours();
+var mymin = myclock.getMinutes();
+var mysec = myclock.getSeconds();
+
+console.log(myhour, mymin, mysec);
+    var mymins = (mymin*6)+'deg';
+    var mysecs = (mysec*6)+'deg';
+    var hours = (myhour*30) + 'deg';
+    console.log(hours, mymins, mysecs);
+    document.getElementById('sec').style.transform = 'rotate(' + mysecs + ')';
+    document.getElementById('min').style.transform = 'rotate(' + mymins + ')';
+    document.getElementById('hr').style.transform = 'rotate(' + hours + ')';
+}
+    
+</script>
+    
+</body>
+</html>

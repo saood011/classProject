@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date Format</title>
+</head>
+<body>
+    <form action="">
+     Birthday:    <input id="input" type="text" autofocus>
+    <button type="button" onclick="dateformat()">Submit</button>
+    </form>
+<p id="demo"></p>
+<script>
+
+function dateformat(){
+var inputs= document.getElementById('input').value;
+
+
+if (inputs.indexOf('-') > -1)
+{
+    var mydata = inputs.split("-");
+    document.getElementById('demo').innerHTML ="The year: " + mydata[0] + "<br>"+ "The month: " + mydata[1] + "<br>" + "The day: " + mydata[2];
+
+
+}else if(inputs.indexOf('/') > -1){
+    var mydata = inputs.split('/');
+    document.getElementById('demo').innerHTML ="The year: " + mydata[2] + "<br>"+ "The month: " + mydata[0] + "<br>" + "The day: " + mydata[1];
+
+} else if (inputs.indexOf(' ') > -1) {
+    var mydata = inputs.split(' ');
+    document.getElementById('demo').innerHTML ="The year: " + mydata[2] + "<br>"+ "The month: " + mydata[1] + "<br>" + "The day: " + mydata[0];
+
+}
+var date = new Date(inputs);
+console.log(date);
+if (date == 'Invalid Date'){
+    alert("Invalid Date Format");
+}
+}
+
+
+
+</script>
+</body>
+</html>

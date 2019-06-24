@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date Function</title>
+</head>
+<body>
+    <h1 id="birth">Welcome to my page</h1>
+    <p id="demo"></p>
+    <script>
+        document.getElementById('demo').innerHTML = Date();
+        var d = new Date();
+        var day = d.getDate();
+        var month = d.getMonth();
+        var year = d.getYear();
+        var birthday = new Date(88, 0, 16);
+        console.log(day, month, year);
+        if ( day == birthday.getDate() && month == birthday.getMonth()){
+            document.getElementById('birth').innerHTML = "Its your birthday today, Happy birthday"
+        }
+    
+    </script>
+</body>
+</html>
