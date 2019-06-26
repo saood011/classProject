@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spread operator</title>
+</head>
+<body>
+    <script>
+    var personalInfo = {
+        name : 'Saood',
+        lname : 'Akhtar',
+        age : 30
+    }
+    var EducationalInfo = {
+        level: 'Fulltime',
+        field: "IT",
+        institute: "DCI"
+    }
+    var workExp = {
+        companyName : "trivago",
+        startTime : "20.02.2020",
+        endTime : 'Unlimited',
+        jobTitle: 'Front-end-engineer'
+    }
+    
+    var MohdSaoodAkhtar = {
+        ...personalInfo, 
+        ...EducationalInfo, 
+        ...workExp
+    }
+    console.log(MohdSaoodAkhtar);
+
+    </script>
+</body>
+</html>

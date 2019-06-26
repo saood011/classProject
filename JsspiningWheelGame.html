@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spining Wheel game   </title>
+
+
+<style>
+#outerdiv{
+    width: 500px;
+    height: 500px;
+    background:url('/spin.png');
+    background-size: cover;
+    animation: mymove 1s ease-out;
+
+}
+@keyframes mymove {
+  to {transform: rotate(340deg);}
+}
+
+
+
+</style>
+</head>
+<body>
+    <div id="outerdiv">
+            <div id="innerdiv"></div>
+    </div>
+    <button type="button" onclick="spin()">Spin</button>
+
+<script>
+function spin(){
+    
+    var myarray = ["mymove","mymove","mymove"];
+    var deg = Math.round(Math.random()*2);
+    console.log(deg);
+    document.getElementById('outerdiv').style.animation = myarray[deg] + " 4s forwards ease-out";
+}
+
+
+
+
+</script>
+</body>
+</html>
