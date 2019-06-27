@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Finding Largest using spread</title>
+</head>
+<body>
+    <script>
+
+    ///Finding the Largest number in an array - Function
+
+    var num = [1,2,3,14,5,6,7];
+
+    function largest(arrayName){
+       var result = Math.max(...arrayName);
+        return result;
+    }
+    console.log('Largest Number: ' + largest(num));
+
+
+
+
+    ///Finding the smallest number in an array - Function
+
+    function smallest(arrayName){
+       var result = Math.min(...arrayName);
+        return result;
+    }
+    console.log('Smallest Number: ' + smallest(num));
+
+    ///Mohd Saood Akhtar...
+    
+    </script>
+</body>
+</html>
