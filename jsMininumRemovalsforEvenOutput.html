@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minimum Removals for even output</title>
+</head>
+<body>
+    <script>
+    ///Mohd Saood akhtar
+
+   // Minimum number of removals to make the sum of all the elements even
+    var num  = [5,7,9,12];
+    var num2 = [1,2,3,4];
+    var num3 = [5,7,9,11];
+
+    function minRemovals(a,b,c,d){
+        var result = (a+b+c+d)%2;
+        if(result == 0){
+            console.log("0 removals" ) ;
+        }else{
+            console.log(result + " removals");
+        }
+    }
+   minRemovals(...num);
+   minRemovals(...num2);
+   minRemovals(...num3);
+
+    
+    </script>
+</body>
+</html>
