@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Combining Arrays</title>
+</head>
+<body>
+    <script>
+    //step one/////////////////////////////
+    var euroCountries = ['Germany', 'Poland', 'France'];
+    var asianCountries = ['India', 'China', 'Japan'];
+
+
+
+    //step two ////////////////////////////   
+    var euroandasian = [...euroCountries, ...asianCountries];
+    console.log(euroandasian);
+    var asianandeuro = [...asianCountries, ...euroCountries];
+    console.log(asianandeuro);
+
+
+
+    //step three  ////////////////////////////  
+    var test = ['Russia', 'USA'];
+    var asianAndEuroOne = [...asianandeuro, test];
+    console.log(asianAndEuroOne);
+    
+
+    
+    //step four/////////////////////////////////
+    var name = 'saood';
+    var nameArray = [...name];
+    console.log(nameArray);
+    var nameArray = [...name, ...asianCountries];
+    console.log(nameArray);
+    
+    
+    </script>
+    
+</body>
+</html>
