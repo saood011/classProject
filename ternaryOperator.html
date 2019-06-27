@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ternary Operator</title>
+</head>
+<body>
+
+    <h1>Driving age test!</h1>
+    Input your age: <input type="text" id="drive">
+    <button type="button" onclick="drivenow()" >check</button>
+    Check console
+    <script>
+
+    ///Mohd Saood Akhtar
+    
+    // Test for Ternary
+    var test = 1;
+    test > 0 ? alert('Its a Positive') : alert('Its a Negative');
+
+
+    /// First Exercise 
+    function drivenow(){
+        var canDrive = document.getElementById('drive').value;
+        canDrive >=18 ? console.log("yes, can drive!!") : console.log("no, too young");   
+    }
+     
+
+    /// Second Exercise 
+    var speedCheck = 140;
+    speedCheck > 130 ? console.log("you're going too fast") : console.log("You're driving below the speed limit"); 
+
+
+    /// Third Exercise
+    var personAge = 11;
+    personAge < 21 ? console.log("serve juice"): console.log('serve wine');
+
+
+    /// Forth Exercise
+    var isStudent = "true";
+    isStudent == "true" ? console.log("Ticket costs 5.000 euros") : console.log("Ticket costs 12.000 Euros");
+
+
+    /// Fifth Exercise
+    var timeOfDay = 'morning';
+    timeOfDay == 'morning' ? console.log("Good Morning"): console.log("Good Evening");
+
+
+    </script>
+</body>
+</html>
