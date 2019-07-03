@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classes in javascript and prototype </title>
+</head>
+<body>
+    <script>
+        ////Mohd Saood Akhtar///
+    class Person {
+        constructor (name, lname, age){
+            this.name = name;
+            this.lname = lname;
+            this.age = age;
+        }
+        
+     }
+
+    Person.prototype.fullName = function(){
+        return this.lname + ", " + this.name;
+    };
+
+    var me = new Person('Saood',"Akhtar", 30);
+
+    console.log(me.fullName());  
+    
+    </script>
+</body>
+</html>
