@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Super Classes </title>
+</head>
+<body>
+    <script>
+    class Animal{
+        constructor(color, eyes, legs, tail){
+            this.color = color;
+            this.eyes = eyes;
+            this.legs = legs;
+            this.tail = tail;
+        }
+        sleeping(){
+            return "is sleeping";
+        }
+        eating(){
+            return 'is eating';
+        }
+    }
+    
+    class Tiger extends Animal{
+        constructor(color, eyes, legs, tail, strips, weight){
+            super(color, eyes, legs, tail);
+            this.strips= strips;
+            this.weight=weight;
+
+        }
+    }
+
+    class BengalTiger extends Tiger{
+        constructor(color, eyes, legs, tail, strips, weight, name,){
+            super(color, eyes, legs, tail, strips, weight);
+            this.name = name;
+        }
+    }
+    var normalTiger = new Tiger('brown', 'black', 'four', 'one', 'small', 100);
+    var bengali = new BengalTiger('brown', 'black', 'four', 'one', 'large', 150, 'bengali');
+    console.log(normalTiger.eating());
+    console.log(normalTiger);
+    console.log(bengali.sleeping());
+    console.log(bengali);
+   
+    
+    </script>
+</body>
+</html>

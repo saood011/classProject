@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get and Set in Classes</title>
+</head>
+<body>
+    <script>
+    class myDate extends Date{
+       constructor(Year, Month, Day, Hours, Minutes, HoursandMinutes){
+           super(Year, Month, Day, Hours, Minutes);
+           this.HoursandMinutes = HoursandMinutes;
+       }
+        get timeoftheday(){
+            return this.getHours() + " : " + this.getMinutes();
+        }
+        
+    }
+    var d = new myDate(2019,6,4,15,08);
+    console.log(d.timeoftheday);
+    
+    </script>
+</body>
+</html>
