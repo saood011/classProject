@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM in javascript</title>
+<style>
+div{
+    background: red;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <p>Welcome</p>
+    <p>Welcome again</p>
+    <p>Welcome once again</p>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+    <button type="button" onclick="func()">click</button>
+<script>
+function func(){
+document.getElementById('demo').innerHTML = "Heading by js";
+
+for (var i =0; i<3; i++){
+document.getElementsByTagName("p")[i].innerHTML = "Welcome by JS";
+
+document.getElementsByClassName("div")[i].style.backgroundColor = 'green';
+}
+}
+</script>
+</body>
+</html>
