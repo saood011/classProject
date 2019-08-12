@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bubbling and Capturing in Javascript</title>
+<style>
+div,p{
+    border: 1px solid black;
+}
+#a {
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+}
+#b{
+    width: 200px;
+    height: 200px;
+    margin: 70px;
+}
+p{
+    width: 100px;
+    height: 100px;
+    margin: 45px;
+    color: white;
+}
+
+</style>
+</head>
+<body>
+
+    <div id="a">
+        <div id="b">
+            <p id="c"></p>
+        </div>
+    </div>
+
+
+<script>
+document.getElementById('c').addEventListener('click', myfunC);
+document.getElementById('c').addEventListener('mouseover', myfunMouseDownC);
+document.getElementById('c').addEventListener('mouseout', myfunMouseOutC);
+
+
+
+document.getElementById('b').addEventListener('click', myfunB );
+document.getElementById('b').addEventListener('mouseover', myfunMouseDownB );
+document.getElementById('b').addEventListener('mouseout', myfunMouseOutB);
+
+
+document.getElementById('a').addEventListener('click', myfunA);
+document.getElementById('a').addEventListener('mouseover', myfunMouseDownA);
+document.getElementById('a').addEventListener('mouseout', myfunMouseOutA);
+
+/// On mouse out///
+function myfunMouseOutC(){
+    document.getElementById('c').style.border = '1px solid black';
+}
+function myfunMouseOutB(){
+    document.getElementById('b').style.border = '1px solid black';
+}
+function myfunMouseOutA(){
+    document.getElementById('a').style.border = '1px solid black';
+}
+
+//// On mouse over////
+function myfunMouseDownC(){
+    document.getElementById('c').style.border = '3px solid red';
+}
+function myfunMouseDownB(){
+    document.getElementById('b').style.border = '3px solid red';
+}
+function myfunMouseDownA(){
+    document.getElementById('a').style.border = '3px solid red';
+}
+
+//// On click/////
+function myfunC(){   
+    setInterval(() => {
+        document.getElementById('c').style.background = "black";
+        document.getElementById('c').innerHTML = "I am the para";
+    }, 1000);
+}
+
+function myfunB(){
+
+    setInterval(() => {
+        document.getElementById('b').style.background = "grey";
+        document.getElementById('b').appendChild(textnode);
+
+    }, 2000);
+}
+
+function myfunA(){
+
+    setInterval(() => {
+        document.getElementById('a').style.background = "lightgrey";
+    }, 3000);}
+
+</script>
+</body>
+</html>

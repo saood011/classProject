@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Replace HTML elements with JS</title>
+</head>
+<body>
+    <ul>
+        <li>Apple</li>  
+        <li>Banana</li> 
+        <li>Orange </li>
+        <li>kiwi</li>
+    </ul>
+
+<script>
+var peach = document.createElement("li");
+var text = document.createTextNode("Peach");
+peach.appendChild(text);
+
+var item3 = document.getElementsByTagName("li")[2];
+var ul = document.getElementsByTagName('ul')[0];
+
+ul.replaceChild(peach,item3);
+
+document.title = 'My new title';
+
+</script>
+</body>
+</html>

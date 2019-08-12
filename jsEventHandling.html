@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event handling</title>
+<style>
+
+img{
+    width: 500px;
+    height: 500px;
+}
+div{
+    width: 100%;
+    height: 100%;
+}
+</style>
+</head>
+<body>
+    <div>
+        <img id="img" src="../Pictures/ss.jpg" alt="">
+    </div>
+    <button type="button">Show/Hide image</button>
+    <p></p>
+<script>
+//Mohd Saood Akhtar..
+
+document.getElementsByTagName("button")[0].onclick = function (){
+    document.getElementsByTagName('img')[0].style.visibility = document.getElementById("img").style.visibility == 'visible'? 'hidden' : 'visible';;
+}
+
+
+</script>
+</body>
+</html>

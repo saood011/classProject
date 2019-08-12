@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Class</title>
+<style>
+
+.C1{color:red;}
+</style>
+</head>
+<body>
+<h1 id="heading">Saood Akhtar</h1>
+<button type="button" onclick="togglebotton()">Toggle</button>
+
+
+<script>
+    var Classes = document.getElementById("heading").classList;
+    console.log(Classes);
+    document.getElementById("heading").classList.add("C1");
+    function togglebotton(){
+        document.getElementById("heading").classList.toggle("C1");
+    }
+</script>
+</body>
+</html>
