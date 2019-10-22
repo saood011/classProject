@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Storage</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form action="" onchange="setLocalStorage()">
+            <label for="fname">FirstName:</label>
+            <input type="text" name="fname" id="fname">
+            <label for="lname">LastName:</label>
+            <input type="text" name="lname" id="lname">
+        <button type="button" onclick = " displayResult()">Submit</button>
+        </form>
+        
+        <script >
+        var fname = document.getElementById("fname");
+        var lname = document.getElementById('lname');
+        function displayResult(){
+            console.log(`FirstName: ${fname.value} LastName: ${lname.value}`);
+            localStorage.clear();
+            fname.value = "";
+            lname.value = "";
+        }
+        function setLocalStorage(){
+            localStorage.setItem('FNAME', fname.value);
+            localStorage.setItem('LNAME', lname.value);
+        }
+        
+        </script>
+    </body>
+</html>

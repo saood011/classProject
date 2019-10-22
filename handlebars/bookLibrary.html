@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>HandleBars/Template</title>
+   <style>
+       body {
+           font-family: Arial, Helvetica, sans-serif;
+           background-color: white;
+           color: black;
+       }
+       .card {
+           width: 400px;
+           background-color: darkgrey;
+           margin: 1px;
+       }
+       img{
+           width: 250px;
+           height: 250px;
+           border: 5px solid white;
+           margin: 10px;
+           border-left: 53px solid white;
+           border-right: 53px solid white;
+       }
+       li{
+           list-style-type: none;
+           background: white;
+           margin: 10px;
+           padding: 10px;
+       }
+       ul{
+           padding: 10px;
+       }
+       div{
+           background: white;
+           padding: 10px;
+           margin: 10px;
+       }
+       #content{
+           display: flex;
+           flex-flow: row wrap;
+           margin: 0px;
+           padding: 0px;
+       }
+   </style>
+</head>
+<body>
+   <div id="content"></div>
+   <!--Creating the template-->
+   <script id="myTemplate" type="text/x-handlebars-template">
+    {{#each books}}
+    <div class="card">
+           <ul>
+               <li><b>Title: </b> {{titles}}</li>
+               <li> <b>Author: </b> {{author}}</li>
+               <li> <b>Publisher:</b>{{#if publisher}} {{publisher}}{{/if }}{{#unless publisher}}{{author}}{{/unless}}</li>
+               <img src={{cover}} alt="" srcset="">
+              
+               {{#with price}}
+
+                    <li>India: {{./India}}</li>
+                    <li>Germany: {{./Germany}}</li>
+                    <li>USA: {{./USA}}</li>
+
+                {{/with}}
+           </ul>
+    </div>
+    {{/each}}
+
+   </script>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

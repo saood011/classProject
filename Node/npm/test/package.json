@@ -1,0 +1,14 @@
+{
+  "name": "fbw011",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prograssBar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MoSaAk",
+  "license": "ISC",
+  "bin": {
+    "fbw011": "./progressBar.js"
+  }
+}

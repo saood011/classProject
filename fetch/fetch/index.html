@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch Operations</title>
+</head>
+<body>
+    <img src="" id="mypic">
+    <div id="container"></div>
+    <button type="submit" onclick="getProfile()">View Profile</button>
+   <script>
+    function getProfile(){
+        ///fetching image...
+        fetch("./saood.jpg")
+        .then(response => {
+            return response.blob();
+        })
+        .then(blob=> {
+            return URL.createObjectURL(blob);
+        })
+        .then(src=>{
+            document.getElementById('mypic').src = src;
+        }
+        )
+        ///fetching info..
+        async function displayText(){
+            var response = await fetch ('./info.txt');
+            var result = await response.text();
+            return result;
+        }
+        displayText().then(data=>{
+            document.getElementById('container').innerHTML = data ;
+        })
+        }
+
+    </script> 
+</body>
+</html>
