@@ -1,0 +1,66 @@
+{
+  "editor.fontSize": 15,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tokenColorCustomizations": {
+    "comments": "#585656",
+    "keywords": "#F86363",
+    "types": "#FF893A",
+    "strings": "#588F2B",
+    "functions": "#FAC16D",
+    "numbers": "#8EFA2A",
+    "textMateRules": [
+      {
+        "scope": "entity.name.tag",
+        "settings": {
+          "foreground": "#05D7FC"
+        }
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    "sideBar.foreground": "#D4D1D1",
+    "sideBar.background": "#1F272B",
+    "activityBar.foreground": "#858383",
+    "activityBarBadge.background": "#0143F7",
+    "activityBarBadge.foreground": "#fff",
+    "list.hoverBackground": "#7D7D80",
+    "statusBar.foreground": "#fff",
+    "statusBar.background": "#019FBB",
+    "tab.activeBorder": "#28EC01",
+    "tab.activeForeground": "#fff",
+    // "tab.activeBackground": "#1DBD00",
+    "tab.inactiveForeground": "#B3B0B0",
+    "activityBar.border": "#00C3FF",
+    "list.activeSelectionBackground": "#019FBB",
+    "list.activeSelectionForeground": "#fff",
+    "list.hoverForeground": "#000",
+    "list.inactiveSelectionBackground": "#017A01",
+    "list.inactiveSelectionForeground": "#000",
+    "editorSuggestWidget.foreground": "#fff",
+    "editorSuggestWidget.selectedBackground": "#01416B",
+    "editor.selectionBackground": "#135564",
+    "editor.selectionHighlightBackground": "#135564",
+    "editor.lineHighlightBackground": "#202020",
+    "workbench.activityBar.visible": true,
+    // "editor.lineHighlightBorder": "#FF0000"
+    // "editor.background": "#FF0000"
+    "editorCursor.foreground": "#FF9900",
+    "editor.wordHighlightBackground": "#772828",
+    "editor.wordHighlightStrongBackground": "#414142",
+    // "editor.wordHighlightStrongBorder": "#FF0000"
+    "editorLineNumber.foreground": "#5F5E5E"
+  },
+  "explorer.confirmDelete": false,
+  "extensions.closeExtensionDetailsOnViewChange": true,
+  "workbench.colorTheme": "Ayu Dark",
+  "editor.fontWeight": "500",
+  "window.zoomLevel": 0,
+  "files.autoSave": "off",
+  "editor.formatOnSave": true,
+  "window.restoreFullscreen": true,
+  "editor.renderControlCharacters": false,
+  "workbench.sideBar.location": "left",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "liveServer.settings.donotShowInfoMsg": true
+}
