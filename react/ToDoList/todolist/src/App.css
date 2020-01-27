@@ -20,8 +20,10 @@
 .App-link {
   color: #09d3ac;
 }
-.strike{
+.is-done {
   text-decoration: line-through;
   color: red;
-  font-size: 15px;
+}
+.sno {
+  width: 5% !important;
 }
